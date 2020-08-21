@@ -1,7 +1,7 @@
 {
 	"name": "@intrnl/substate-react",
 	"description": "Simple global state management for React",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"author": "intrnl",
 	"repository": {
