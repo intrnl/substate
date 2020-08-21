@@ -1,0 +1,44 @@
+{
+	"name": "@intrnl/substate-preact",
+	"description": "Simple global state management for Preact",
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": "intrnl",
+	"repository": {
+		"url": "https://github.com/intrnl/substate",
+		"directory": "packages/substate-preact"
+	},
+	"source": "lib/index.ts",
+	"main": "dist/substate-preact.js",
+	"module": "dist/substate-preact.mjs",
+	"types": "types/index.ts",
+	"exports": {
+		".": {
+			"require": "./dist/substate-preact.js",
+			"import": "./dist/substate-preact.mjs"
+		}
+	},
+	"files": [
+		"dist/",
+		"types/",
+		"README.md"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"watch": "rollup -cw",
+		"prepublishOnly": "pnpm run build"
+	},
+	"peerDependencies": {
+		"@intrnl/substate": "workspace:^0.2.0",
+		"preact": "^10.4.7"
+	},
+	"devDependencies": {
+		"@intrnl/substate": "workspace:^0.2.0",
+		"builtin-modules": "^3.1.0",
+		"esbuild": "^0.6.26",
+		"preact": "^10.4.7",
+		"rollup": "^2.26.4",
+		"rollup-plugin-esbuild": "^2.4.2",
+		"rollup-plugin-node-externals": "^2.2.0"
+	}
+}

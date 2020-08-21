@@ -1,0 +1,48 @@
+{
+	"name": "@intrnl/substate-react",
+	"description": "Simple global state management for React",
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": "intrnl",
+	"repository": {
+		"url": "https://github.com/intrnl/substate",
+		"directory": "packages/substate-react"
+	},
+	"source": "@intrnl/substate-preact/lib/index.ts",
+	"main": "dist/substate-react.js",
+	"module": "dist/substate-react.mjs",
+	"types": "types/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/substate-react.js",
+			"import": "./dist/substate-react.mjs"
+		}
+	},
+	"files": [
+		"dist/",
+		"types/",
+		"README.md"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"watch": "rollup -cw",
+		"prepublishOnly": "pnpm run build"
+	},
+	"peerDependencies": {
+		"@intrnl/substate": "workspace:^0.2.0",
+		"react": "^16.13.1"
+	},
+	"devDependencies": {
+		"@intrnl/substate": "workspace:^0.2.0",
+		"@intrnl/substate-preact": "workspace:^0.1.0",
+		"@rollup/plugin-alias": "^3.1.1",
+		"@rollup/plugin-node-resolve": "^9.0.0",
+		"@types/react": "^16.9.46",
+		"builtin-modules": "^3.1.0",
+		"esbuild": "^0.6.26",
+		"react": "^16.13.1",
+		"rollup": "^2.26.4",
+		"rollup-plugin-esbuild": "^2.4.2",
+		"rollup-plugin-node-externals": "^2.2.0"
+	}
+}

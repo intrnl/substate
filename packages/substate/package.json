@@ -1,0 +1,39 @@
+{
+	"name": "@intrnl/substate",
+	"description": "Simple global state management",
+	"version": "0.2.0",
+	"license": "MIT",
+	"author": "intrnl",
+	"repository": {
+		"url": "https://github.com/intrnl/substate",
+		"directory": "packages/substate"
+	},
+	"source": "lib/index.ts",
+	"main": "dist/substate.js",
+	"module": "dist/substate.mjs",
+	"types": "lib/index.ts",
+	"exports": {
+		".": {
+			"require": "./dist/substate.js",
+			"import": "./dist/substate.mjs"
+		}
+	},
+	"files": [
+		"lib/",
+		"dist/",
+		"types/",
+		"README.md"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"watch": "rollup -cw",
+		"prepublishOnly": "pnpm run build"
+	},
+	"devDependencies": {
+		"builtin-modules": "^3.1.0",
+		"esbuild": "^0.6.26",
+		"rollup": "^2.26.4",
+		"rollup-plugin-esbuild": "^2.4.2",
+		"rollup-plugin-node-externals": "^2.2.0"
+	}
+}

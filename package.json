@@ -1,0 +1,7 @@
+{
+	"private": true,
+	"name": "substate-workspace",
+	"devDependencies": {
+		"typescript": "^3.9.7"
+	}
+}
