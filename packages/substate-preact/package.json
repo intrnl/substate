@@ -8,6 +8,7 @@
 		"url": "https://github.com/intrnl/substate",
 		"directory": "packages/substate-preact"
 	},
+	"sideEffects": false,
 	"source": "lib/index.ts",
 	"main": "dist/substate-preact.js",
 	"module": "dist/substate-preact.mjs",

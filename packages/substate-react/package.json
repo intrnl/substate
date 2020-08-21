@@ -8,6 +8,7 @@
 		"url": "https://github.com/intrnl/substate",
 		"directory": "packages/substate-react"
 	},
+	"sideEffects": false,
 	"source": "@intrnl/substate-preact/lib/index.ts",
 	"main": "dist/substate-react.js",
 	"module": "dist/substate-react.mjs",
