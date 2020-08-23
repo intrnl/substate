@@ -7,17 +7,11 @@ export function shallow (a: any, b: any): boolean {
 	if (get_keys_length(a) !== get_keys_length(b)) return false;
 
 	for (let key in a) {
-		let value_a = a[key];
-		let value_b = b[key];
-
-		if (value_a !== value_b) return false;
+		if (a[key] !== b[key]) return false;
 	}
 
 	for (let key in b) {
-		let value_a = a[key];
-		let value_b = b[key];
-
-		if (value_a !== value_b) return false;
+		if (a[key] !== b[key]) return false;
 	}
 
 	return true;
