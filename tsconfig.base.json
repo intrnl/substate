@@ -1,7 +1,5 @@
 {
 	"compilerOptions": {
-		"rootDir": "lib/",
-		"outDir": "types/",
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"target": "esnext",
