@@ -12,7 +12,7 @@
 	"source": "lib/index.ts",
 	"main": "dist/substate.js",
 	"module": "dist/substate.mjs",
-	"types": "lib/index.ts",
+	"types": "types/index.d.ts",
 	"exports": {
 		".": {
 			"require": "./dist/substate.js",
