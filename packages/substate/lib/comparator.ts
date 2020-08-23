@@ -3,7 +3,7 @@ export function equal (a: any, b: any): boolean {
 }
 
 export function shallow (a: any, b: any): boolean {
-	if (!is_object(a) || !is_object(b)) return false;
+	if (!is_object(a) || !is_object(b)) return a === b;
 	if (get_keys_length(a) !== get_keys_length(b)) return false;
 
 	for (let key in a) {
