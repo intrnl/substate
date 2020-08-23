@@ -1,5 +1,6 @@
 node_modules/
 dist/
+types/
 
 npm-*.log
 pnpm-*.log
