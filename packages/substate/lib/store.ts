@@ -1,3 +1,6 @@
+import { equal } from './comparator';
+
+
 export class Store<S extends Record<string | number | symbol, any>> {
 	public name: string;
 	public initialState: S;
@@ -43,19 +46,23 @@ export class Store<S extends Record<string | number | symbol, any>> {
 	 * values as well.
 	 * @param selector Function for selecting a state value
 	 * @param callback Function that gets called on change
+	 * @param comparator Function that compares previous and next state
 	 * @returns Unsubscribe function
 	 */
-	public watch<T> (selector: ((store: S) => T), callback: ((value: T) => void)) {
+	public watch<T> (
+		selector: ((store: S) => T),
+		callback: ((value: T) => void),
+		comparator: ((a: any, b: any) => boolean) = equal
+	) {
 		let prevState = selector(this.currentState);
 
 		let subscription = () => {
 			let currState = selector(this.currentState);
 
-			if (currState !== prevState) {
+			if (!comparator(currState, prevState)) {
 				try { callback(currState) } catch {}
+				prevState = currState;
 			}
-
-			prevState = currState;
 		};
 
 		this._subscribers.push(subscription);
