@@ -35,11 +35,11 @@
 		"preact": "^10.4.7"
 	},
 	"devDependencies": {
-		"@intrnl/substate": "workspace:^0.2.0",
+		"@intrnl/substate": "workspace:^0.2.4",
 		"builtin-modules": "^3.1.0",
-		"esbuild": "^0.6.26",
+		"esbuild": "^0.6.27",
 		"preact": "^10.4.7",
-		"rollup": "^2.26.4",
+		"rollup": "^2.26.5",
 		"rollup-plugin-esbuild": "^2.4.2"
 	}
 }
