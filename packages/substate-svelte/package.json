@@ -1,0 +1,45 @@
+{
+	"name": "@intrnl/substate-svelte",
+	"description": "Simple global state management for Svelte",
+	"version": "0.1.1",
+	"license": "MIT",
+	"author": "intrnl",
+	"repository": {
+		"url": "https://github.com/intrnl/substate-svelte",
+		"directory": "packages/substate-svelte"
+	},
+	"sideEffects": false,
+	"source": "lib/index.ts",
+	"main": "dist/substate-svelte.js",
+	"module": "dist/substate-svelte.mjs",
+	"types": "types/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/substate-svelte.js",
+			"import": "./dist/substate-svelte.mjs"
+		}
+	},
+	"files": [
+		"dist/",
+		"types/",
+		"README.md"
+	],
+	"scripts": {
+		"build": "pnpm run build:lib & pnpm run build:types",
+		"build:lib": "rollup -c",
+		"build:types": "tsc",
+		"prepublishOnly": "pnpm run build"
+	},
+	"peerDependencies": {
+		"@intrnl/substate": "workspace:^0.2.0",
+		"svelte": "^3.24.1"
+	},
+	"devDependencies": {
+		"@intrnl/substate": "workspace:^0.2.0",
+		"builtin-modules": "^3.1.0",
+		"esbuild": "^0.6.26",
+		"rollup": "^2.26.4",
+		"rollup-plugin-esbuild": "^2.4.2",
+		"svelte": "^3.24.1"
+	}
+}
