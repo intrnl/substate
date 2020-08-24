@@ -1,6 +1,3 @@
-import { equal } from './comparator';
-
-
 export class Store<S extends Record<string | number | symbol, any>> {
 	public name: string;
 	public initialState: S;
@@ -52,7 +49,7 @@ export class Store<S extends Record<string | number | symbol, any>> {
 	public watch<T> (
 		selector: ((store: S) => T),
 		callback: ((value: T) => void),
-		comparator: ((a: any, b: any) => boolean) = equal
+		comparator: ((a: any, b: any) => boolean) = Object.is
 	) {
 		let prevState = selector(this.currentState);
 
