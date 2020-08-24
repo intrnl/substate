@@ -1,5 +1,7 @@
 export function shallow (a: any, b: any): boolean {
-	if (!is_object(a) || !is_object(b)) return a === b;
+	if (Object.is(a, b)) return true;
+
+	if (!is_object(a) || !is_object(b)) return false;
 	if (get_keys_length(a) !== get_keys_length(b)) return false;
 
 	for (let key in a) {
