@@ -44,7 +44,6 @@
 		"esbuild": "^0.6.26",
 		"react": "^16.13.1",
 		"rollup": "^2.26.4",
-		"rollup-plugin-esbuild": "^2.4.2",
-		"rollup-plugin-node-externals": "^2.2.0"
+		"rollup-plugin-esbuild": "^2.4.2"
 	}
 }

@@ -1,6 +1,5 @@
 import pkg from './package.json';
 import esbuild from 'rollup-plugin-esbuild';
-import externals from 'rollup-plugin-node-externals';
 
 
 /** @type {import('rollup').RollupOptions} */
@@ -10,15 +9,10 @@ let config = {
 		{ file: pkg.module, format: 'esm' },
 		{ file: pkg.main, format: 'cjs' },
 	],
+	external: ['preact/hooks'],
 	plugins: [
-		externals({
-			deps: true,
-			optDeps: true,
-			peerDeps: true,
-			devDeps: false,
-		}),
 		esbuild({
-			target: 'esnext',
+			target: 'es2020',
 			watch: !!process.env.ROLLUP_WATCH,
 		}),
 	],

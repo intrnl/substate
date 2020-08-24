@@ -1,7 +1,6 @@
 import pkg from './package.json';
 import resolve from '@rollup/plugin-node-resolve';
 import alias from '@rollup/plugin-alias';
-import externals from 'rollup-plugin-node-externals';
 import esbuild from 'rollup-plugin-esbuild';
 
 
@@ -12,6 +11,7 @@ let config = {
 		{ file: pkg.module, format: 'esm' },
 		{ file: pkg.main, format: 'cjs' },
 	],
+	external: ['react'],
 	plugins: [
 		alias({
 			entries: {
@@ -19,12 +19,6 @@ let config = {
 			},
 		}),
 		resolve({ browser: true }),
-		externals({
-			deps: true,
-			optDeps: true,
-			peerDeps: true,
-			devDeps: false,
-		}),
 		esbuild({
 			target: 'esnext',
 			watch: !!process.env.ROLLUP_WATCH,
