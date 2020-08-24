@@ -35,7 +35,7 @@
 		"svelte": "^3.24.1"
 	},
 	"devDependencies": {
-		"@intrnl/substate": "workspace:^0.2.4",
+		"@intrnl/substate": "workspace:^0.2.6",
 		"builtin-modules": "^3.1.0",
 		"esbuild": "^0.6.27",
 		"rollup": "^2.26.5",

@@ -35,7 +35,7 @@
 		"preact": "^10.4.7"
 	},
 	"devDependencies": {
-		"@intrnl/substate": "workspace:^0.2.4",
+		"@intrnl/substate": "workspace:^0.2.6",
 		"builtin-modules": "^3.1.0",
 		"esbuild": "^0.6.27",
 		"preact": "^10.4.7",
