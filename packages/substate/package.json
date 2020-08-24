@@ -1,7 +1,7 @@
 {
 	"name": "@intrnl/substate",
 	"description": "Simple global state management",
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"license": "MIT",
 	"author": "intrnl",
 	"repository": {
