@@ -1,7 +1,7 @@
 {
 	"name": "@intrnl/substate-react",
 	"description": "Simple global state management for React",
-	"version": "0.1.2",
+	"version": "0.2.0",
 	"license": "MIT",
 	"author": "intrnl",
 	"repository": {
@@ -36,7 +36,7 @@
 	},
 	"devDependencies": {
 		"@intrnl/substate": "workspace:^0.2.4",
-		"@intrnl/substate-preact": "workspace:^0.1.3",
+		"@intrnl/substate-preact": "workspace:^0.2.0",
 		"@rollup/plugin-alias": "^3.1.1",
 		"@rollup/plugin-node-resolve": "^9.0.0",
 		"@types/react": "^16.9.46",
