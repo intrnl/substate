@@ -1,6 +1,15 @@
-# substate
+# `substate`
 
 Small and simple global state management
+
+## Installation
+
+- Install it with your package manager of choice
+  - npm: `npm i @intrnl/substate`
+  - pnpm: `pnpm i @intrnl/substate`
+  - yarn: `yarn add @intrnl/substate`
+
+## Usage
 
 ```js
 import { Store } from '@intrnl/substate';
