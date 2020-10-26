@@ -31,9 +31,6 @@
 		"prepublishOnly": "pnpm run build"
 	},
 	"devDependencies": {
-		"builtin-modules": "^3.1.0",
-		"esbuild": "^0.6.27",
-		"rollup": "^2.26.5",
-		"rollup-plugin-esbuild": "^2.4.2"
+		"@intrnl/bundl": "^0.1.8"
 	}
 }
