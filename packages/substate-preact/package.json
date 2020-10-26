@@ -37,6 +37,6 @@
 	"devDependencies": {
 		"@intrnl/bundl": "^0.1.8",
 		"@intrnl/substate": "workspace:^0.2.7",
-		"preact": "^10.4.8"
+		"preact": "^10.5.5"
 	}
 }
